@@ -35,14 +35,14 @@ sudo ovs-ofctl add-flow s2 -O OpenFlow13 "table=1,priority=50,dl_vlan=20,actions
 sudo ovs-ofctl add-flow s2 -O OpenFlow13 "table=1,priority=50,dl_vlan=30,actions=output:patch22"         # h4->h3 : vlan30 output=(chochi)
 sudo ovs-ofctl dump-flows -O OpenFlow13 s2 table=1
 
-# s3 - table 2
+# s2 - table 2
 sudo ovs-ofctl add-flow s2 -O OpenFlow13 "table=2,priority=50,dl_vlan=20,actions=strip_vlan,output:1"         # h1->h2 : output=(h2)
 sudo ovs-ofctl dump-flows -O OpenFlow13 s2 table=2
 
-# s3 -table 3
+# s2 -table 3
 sudo ovs-ofctl add-flow s2 -O OpenFlow13 "table=3,priority=50,dl_vlan=30,actions=strip_vlan,output:2"         # h3->h4 : output=(h4)
 sudo ovs-ofctl dump-flows -O OpenFlow13 s2 table=3
-# s3 - table 4
+# s2 - table 4
 sudo ovs-ofctl add-flow s2 -O OpenFlow13 "table=4,priority=50,actions=1,2"                                    # 外网数据输入 
 #####
 ##主机ping外网的数据流由chochi网桥处理。

@@ -21,7 +21,7 @@ sudo ovs-ofctl dump-flows -O OpenFlow13 s1 table=3
 ## s1 - table 4
 sudo ovs-ofctl add-flow s1 -O OpenFlow13 "table=4,priority=50,actions=1,2"                            #外网数据输入
 
-#---------------------- s3 ------------------------
+#---------------------- s2 ------------------------
 # s2 - table 0
 sudo ovs-ofctl add-flow s2 -O OpenFlow13 "table=0,priority=50,in_port=1,actions=mod_vlan_vid:20,resubmit(,1)" # h2->h1 : vlan20 ->> table 1
 sudo ovs-ofctl add-flow s2 -O OpenFlow13 "table=0,priority=50,in_port=2,actions=mod_vlan_vid:30,resubmit(,1)" # h4->h3 : vlan30 ->> table 1

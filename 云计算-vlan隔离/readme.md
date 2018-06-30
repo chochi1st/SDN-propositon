@@ -6,7 +6,7 @@
 - topo 在vlan.mn文件中，用mininet的可视化打开该文件，并开启本机ODL控制器（127.0.0.1：6633）。
 - 通外网操作我选择了同一个实验室（一个校园网）里的另外一台主机来互通，所以直接限制了IP，使用者可以在流表里面自己做修改。
 # 说明
-![](SDN-propositon/云计算-vlan隔离/20180629/topo.png)
+!()[SDN-propositon/云计算-vlan隔离/20180629/topo.png]
 # 实验步骤
 1. 开启ODL控制器，在Mininet可视化中打开vlan.mn文件运行拓扑。
 2. 在终端中运行chochi_final.sh脚本、vlan.sh脚本，这两个脚本运行有序！（注意修改IP）

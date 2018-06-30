@@ -41,7 +41,7 @@ sudo ovs-ofctl dump-flows  -O OpenFlow13 s2 table=2
 
 # s2 -table 3
 sudo ovs-ofctl add-flow s2 -O OpenFlow13 "table=3,priority=50,dl_vlan=30,actions=strip_vlan,output:2"         # h3->h4 : output=(h4)
-sudo ovs-ofctl dump-flows -O OpenFlow13 s2 table=3
+sudo ovs-ofctl dump-flows  -O OpenFlow13 s2 table=3
 # s2 - table 4
 sudo ovs-ofctl add-flow s2 -O OpenFlow13 "table=4,priority=50,actions=1,2"                                    # 外网数据输入 
 #####
